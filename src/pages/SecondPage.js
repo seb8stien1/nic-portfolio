@@ -1,15 +1,17 @@
-// SecondPage.js
 import React from 'react';
+import '../App.css';
 import Navbar from "../components/Navbar";
 
-const SecondPage = () => {
-    return (
-        <div>
-            <Navbar/>
-            <h2>Second Page</h2>
-            {/* Add your content here */}
-        </div>
-    );
+class SecondPage extends React.Component {
+    render() {
+
+        return (
+            <div className="App">
+                <Navbar/>
+                <h1>This is the second page</h1>
+            </div>
+        )
+    };
 };
 
 export default SecondPage;
