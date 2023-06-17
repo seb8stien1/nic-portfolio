@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: mintcream;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -36,3 +36,87 @@
     transform: rotate(360deg);
   }
 }
+
+.circle-container {
+  position: relative;
+  width: 600px; /* Adjust the width as needed */
+  height: 600px; /* Adjust the height as needed */
+  margin: 0 auto;
+}
+
+.circle-image {
+  position: absolute;
+  width: 200px; /* Adjust the image size as needed */
+  height: 200px; /* Adjust the image size as needed */
+}
+
+.circle-image:hover {
+  transform: scale(1.5); /* Increase the scale on hover (you can adjust the value as needed) */
+}
+
+/*blue*/
+.circle-image-0 {
+  top: 50%;
+  right: 20%;
+}
+
+/*red*/
+.circle-image-1 {
+  top: 50%;
+  left: 10%;
+}
+
+/*orange*/
+.circle-image-2 {
+  top: 17%;
+  left: 5%;
+}
+
+/*gray*/
+.circle-image-3 {
+  top: 0%;
+  right: 30%;
+}
+
+/*green*/
+.circle-image-4 {
+  top: 20%;
+  right: 10%;
+}
+
+/* Assuming you have a class name "sidebar" for the container element of the sidebar */
+
+.sidebar {
+  width: 250px; /* Adjust the width as needed */
+  height: 100vh; /* Set the height to fill the entire viewport */
+  background-color: #f5f5f5; /* Set the background color of the sidebar */
+  padding: 20px; /* Add padding to the sidebar content */
+}
+
+.sidebar h1 {
+  font-size: 20px; /* Adjust the font size for the sidebar heading */
+  margin-bottom: 20px; /* Add some spacing at the bottom of the heading */
+}
+
+.sidebar ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px; /* Add spacing between each list item */
+}
+
+.sidebar a {
+  display: block; /* Make the links occupy the full width of the sidebar */
+  text-decoration: none;
+  color: #333; /* Set the text color for the links */
+}
+
+.sidebar a:hover {
+  background-color: #ddd; /* Add a background color when hovering over a link */
+  color: #000; /* Adjust the text color on hover */
+}
+
+

@@ -1,15 +1,22 @@
-import logo from './logo.png';
-import './App.css';
+// src/App.js
+import React from 'react';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import SecondPage from './pages/SecondPage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Pen Product</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route exact path='/' element={<HomePage />} />
+                <Route path='/second' element={<SecondPage />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
