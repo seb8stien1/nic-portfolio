@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  min-height:100vh;
 }
 
 .App-logo {
@@ -14,14 +16,18 @@
 }
 
 .App-header {
-  background-color: mintcream;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
+  height: 10vh;
+  margin-top: 2%;
+}
+
+.sidebar {
+  flex: 0 0 20%; /* Set the sidebar width to 20% of the container */
+  /* Add any additional styles for the sidebar */
+}
+
+.content {
+  flex: 1; /* Let the content section fill the remaining space */
+  /* Add any additional styles for the content section */
 }
 
 .App-link {
@@ -56,32 +62,38 @@
 
 /*blue*/
 .circle-image-0 {
-  top: 50%;
-  right: 20%;
+  top: 0%;
+  left: 33%;
 }
 
 /*red*/
 .circle-image-1 {
-  top: 50%;
-  left: 10%;
+  bottom: 0%;
+  right: 33%;
 }
 
 /*orange*/
 .circle-image-2 {
-  top: 17%;
-  left: 5%;
+  bottom: 15%;
+  left: 0%;
 }
 
-/*gray*/
+/*black*/
 .circle-image-3 {
-  top: 0%;
-  right: 30%;
+  top: 15%;
+  left: 0%;
 }
 
 /*green*/
 .circle-image-4 {
-  top: 20%;
-  right: 10%;
+  bottom: 15%;
+  right: 0%;
+}
+
+/*white*/
+.circle-image-5 {
+  top: 15%;
+  right: 0%;
 }
 
 /* Assuming you have a class name "sidebar" for the container element of the sidebar */
@@ -89,7 +101,6 @@
 .sidebar {
   width: 250px; /* Adjust the width as needed */
   height: 100vh; /* Set the height to fill the entire viewport */
-  background-color: #f5f5f5; /* Set the background color of the sidebar */
   padding: 20px; /* Add padding to the sidebar content */
 }
 
