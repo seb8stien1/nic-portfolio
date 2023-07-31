@@ -21,7 +21,7 @@
 }
 
 .sidebar {
-  flex: 0 0 20%; /* Set the sidebar width to 20% of the container */
+  flex: 0 0 30%; /* Set the sidebar width to 20% of the container */
   /* Add any additional styles for the sidebar */
 }
 
@@ -123,6 +123,7 @@
   display: block; /* Make the links occupy the full width of the sidebar */
   text-decoration: none;
   color: #333; /* Set the text color for the links */
+  font-size: 75px;
 }
 
 .sidebar a:hover {

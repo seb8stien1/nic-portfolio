@@ -1,25 +1,17 @@
 import React from 'react';
 import '../App.css';
-import CircleImages from "../components/CircleImages";
-import Navbar from "../components/Navbar";
-import pen from '../resources/pen.png';
+import Navbar from "../components/Navbar2";
 
 class HomePage extends React.Component {
     render() {
 
         return (
-            <div className="App" >
+            <div className="App">
                 <Navbar/>
-                <div className="content">
-                    <div className="App-header">
-                        <img src={pen} alt={"Pen Signature"} style={{height:'100%', width:'auto'}}/>
-                    </div>
-                    <div style={{marginTop:"8%"}}/>
-                    <CircleImages/>
-                </div>
+                <h1>This is the home page</h1>
             </div>
-        );
-    }
-}
+        )
+    };
+};
 
-export default HomePage
+export default HomePage;

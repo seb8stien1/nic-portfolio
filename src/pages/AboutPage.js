@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar2";
 
-class SecondPage extends React.Component {
+class AboutPage extends React.Component {
     render() {
 
         return (
@@ -14,4 +14,4 @@ class SecondPage extends React.Component {
     };
 };
 
-export default SecondPage;
+export default AboutPage;
