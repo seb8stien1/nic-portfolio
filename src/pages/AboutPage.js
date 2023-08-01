@@ -6,7 +6,7 @@ class AboutPage extends React.Component {
     render() {
 
         return (
-            <div className="App">
+            <div>
                 <Navbar/>
                 <h1>This is the second page</h1>
             </div>
