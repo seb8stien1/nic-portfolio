@@ -4,7 +4,7 @@ import '../App.css';
 import Navbar from "../components/Navbar2";
 
 
-class BlackPage extends React.Component {
+class BlackWhitePage extends React.Component {
     render() {
         return (
             <div>
@@ -14,4 +14,4 @@ class BlackPage extends React.Component {
     }
 }
 
-export default BlackPage
+export default BlackWhitePage

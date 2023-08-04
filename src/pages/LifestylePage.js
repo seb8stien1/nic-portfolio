@@ -21,7 +21,7 @@ class LifestylePage extends React.Component {
         return (
             <div >
                 <Navbar/>
-                <div style={{marginLeft:"3vw", marginRight:"3vw",marginTop:"5vh"}}>
+                <div style={{marginLeft:"3vw", marginRight:"3vw", marginTop:"5vh"}}>
                     <PhotoAlbum layout="columns" photos={photos} padding='0' />
                 </div>
             </div>

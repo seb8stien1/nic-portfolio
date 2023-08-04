@@ -9,11 +9,11 @@ import HomePage from './pages/HomePage'
 import ColourWheel from './pages/ColourWheel';
 import AboutPage from './pages/AboutPage';
 import RedPage from './pages/RedPage';
-import BlackAndWhitePage from './pages/BlackAndWhitePage';
+import WhitePage from './pages/WhitePage';
 import GreenPage from './pages/GreenPage';
 import OrangePage from './pages/OrangePage';
 import BluePage from './pages/BluePage';
-import BlackPage from './pages/BlackPage';
+import BlackWhitePage from './pages/BlackWhitePage';
 import PortraitPage from './pages/PortraitPage'
 import ConcertPage from './pages/ConcertPage'
 import LifestylePage from './pages/LifestylePage'
@@ -26,11 +26,11 @@ function App() {
                 <Route path='/colour-wheel' element={<ColourWheel />} />
                 <Route path='/about' element={<AboutPage />} />
                 <Route path='/red' element={<RedPage />} />
-                <Route path='/white' element={<BlackAndWhitePage />} />
+                <Route path='/white' element={<WhitePage />} />
                 <Route path='/green' element={<GreenPage />} />
                 <Route path='/blue' element={<BluePage />} />
                 <Route path='/orange' element={<OrangePage />} />
-                <Route path='/black' element={<BlackPage />} />
+                <Route path='/black-white' element={<BlackWhitePage />} />
                 <Route path='/portrait' element={<PortraitPage />}/>
                 <Route path='/lifestyle' element={<LifestylePage />}/>
                 <Route path='/concert' element={<ConcertPage />}/>

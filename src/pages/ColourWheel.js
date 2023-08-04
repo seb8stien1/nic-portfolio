@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import CircleImages from "../components/CircleImages";
 import Navbar from "../components/Navbar2";
-
+import Box from '@mui/material/Box';
 class ColourWheel extends React.Component {
     render() {
 
@@ -10,8 +10,13 @@ class ColourWheel extends React.Component {
             <div>
                 <Navbar/>
                 <div className="content">
-                    <div style={{marginTop:"8%"}}/>
-                    <CircleImages/>
+                    <Box sx={{display: {xs: 'flex', md:'none'}}} style={{position: 'absolute', left: '50%', top:'50%', transform: 'translate(-50%, -40%)'}}>
+                        <CircleImages imageSize={"27vw"} elementHeight={"90vw"} elementWidth={"90vw"}/>
+                    </Box>
+                    <Box sx={{display: {xs: 'none', md:'flex'}}} style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop:"10vh"}}>
+                        <CircleImages  imageSize={"12vw"} elementHeight={"70vh"} elementWidth={"39vw"}/>
+                    </Box>
+
                 </div>
             </div>
         );

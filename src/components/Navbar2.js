@@ -9,7 +9,7 @@ function Navbar2() {
     const [open, setOpen] = React.useState(false);
 
     return (
-        <AppBar position="static" style={{backgroundColor: 'white', width: '100%', marginTop: '5vh'}} elevation={0}>
+        <AppBar position="static" style={{backgroundColor: 'white', width: '100%', marginTop: '3vh'}} elevation={0}>
             <Toolbar disableGutters>
 
                 <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
@@ -21,7 +21,7 @@ function Navbar2() {
                         onClick={() => setOpen(true)}
                         style={{color: 'black'}}
                     >
-                        <MenuIcon/>
+                        <MenuIcon style={{transform: "scale(1.2)"}}/>
                     </IconButton>
                     <Dialog
                         open={open}
@@ -91,16 +91,22 @@ function Navbar2() {
                     </Link>
                 </Box>
 
-                <Box style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop: '3vh'}}>
+                <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}} style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
                     <Link to="/">
-                        <img alt="Pen Product" src={logo} style={{height: "11.5vh"}}/>
+                        <img alt="Pen Product" src={logo} style={{height: "7vh", width: "13vh"}}/>
+                    </Link>
+                </Box>
+
+                <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}} style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop:"3vh"}}>
+                    <Link to="/">
+                        <img alt="Pen Product" src={logo} style={{height: "12vh", width: "16vh"}}/>
                     </Link>
                 </Box>
 
                 <Box style={{position: 'absolute', right: '1.5vw'}}>
                     <Link to={"https://www.instagram.com/penproduct/"}
                           style={{textDecoration: 'none', color: 'inherit'}}>
-                        <img src={instagram} alt="instagram" style={{height: '5vh'}}/>
+                        <img src={instagram} alt="instagram" style={{height: '4vh'}}/>
                     </Link>
                 </Box>
             </Toolbar>
