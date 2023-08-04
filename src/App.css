@@ -55,7 +55,7 @@
 }
 
 .circle-image:hover {
-  transform: scale(1.5); /* Increase the scale on hover (you can adjust the value as needed) */
+  transform: scale(1.5) ; /* Increase the scale on hover (you can adjust the value as needed) */
 }
 
 /*blue*/
@@ -64,12 +64,18 @@
   left: 50%;
   transform: translateX(-50%)
 }
+.circle-image-0:hover {
+  transform: translateX(-50%) scale(1.5) ;
+}
 
 /*red*/
 .circle-image-1 {
   bottom: 0%;
   left: 50%;
   transform: translateX(-50%)
+}
+.circle-image-1:hover {
+  transform: translateX(-50%) scale(1.5) ;
 }
 
 /*orange*/
