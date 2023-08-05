@@ -45,7 +45,7 @@ const photos = [
     {src:p17, width: 2240, height: 3373},
     {src:p18, width: 3089, height: 2048},
     {src:p19, width: 1505, height: 1004},
-    {src:p20, width: 2741, height: 3655}
+    {src:p20, width: 1370, height: 1827}
 ]
 class RedPage extends React.Component {
     render() {

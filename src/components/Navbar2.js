@@ -1,9 +1,21 @@
 import * as React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import logo from "../resources/pen.png"
 import {Link} from "react-router-dom";
 import instagram from "../resources/instagram.png"
-import {List, ListItem, ListItemButton, Dialog, Button, Typography, IconButton, Toolbar, Box, AppBar} from "@mui/material";
+import {
+    List,
+    ListItem,
+    ListItemButton,
+    Dialog,
+    Button,
+    Typography,
+    IconButton,
+    Toolbar,
+    Box,
+    AppBar
+} from "@mui/material";
 
 function Navbar2() {
     const [open, setOpen] = React.useState(false);
@@ -26,18 +38,56 @@ function Navbar2() {
                     <Dialog
                         open={open}
                         onClose={() => setOpen(false)}
+
+                        PaperProps={{
+                            style: {
+                                backgroundColor: "transparent",
+                                boxShadow: "none",
+                                overflow: "hidden",
+                            },
+                        }}
                         slotProps={{backdrop: {style: {backgroundColor: 'rgba(255,255,255,1)'}}}}
+                        fullScreen={true}
                     >
+                        <Toolbar disableGutters style={{width:"100%", paddingTop: "3vh"}}>
+                            <IconButton
+                                size="large"
+                                aria-label="account of current user"
+                                aria-controls="menu-appbar"
+                                aria-haspopup="true"
+                                onClick={() => setOpen(false)}
+                                style={{color: 'black'}}
+                            >
+                                <CloseIcon style={{transform: "scale(1.2)"}}/>
+                            </IconButton>
+                            <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}
+                                 style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
+                                <Link to="/">
+                                    <img alt="Pen Product" src={logo} style={{height: "7vh", width: "13vh"}}/>
+                                </Link>
+                            </Box>
+
+                            <Box style={{position: 'absolute', right: '1.5vw'}}>
+                                <Link to={"https://www.instagram.com/penproduct/"}
+                                      style={{textDecoration: 'none', color: 'inherit'}}>
+                                    <img src={instagram} alt="instagram" style={{height: '4vh'}}/>
+                                </Link>
+                            </Box>
+                        </Toolbar>
                         <Box style={{
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            position: 'absolute',
+                            top: "50%",
+                            left: "50%",
+                            transform: 'translate(-50%, -50%)',
                         }}>
                             <List sx={{pt: 0}}>
                                 <ListItem disableGutters>
                                     <ListItemButton sx={{color: 'black', display: 'block'}}>
-                                        <Typography>
+                                        <Typography style={{fontSize: '28px'}} >
                                             Portfolio
                                         </Typography>
                                     </ListItemButton>
@@ -45,7 +95,7 @@ function Navbar2() {
                                 <ListItem disableGutters>
                                     <ListItemButton>
                                         <Link to={"/colour-wheel"} style={{textDecoration: 'none'}}>
-                                            <Typography sx={{color: 'black', display: 'block'}}>
+                                            <Typography sx={{color: 'black', display: 'block'}} style={{fontSize: '28px'}}>
                                                 Colour Wheel
                                             </Typography>
 
@@ -55,7 +105,7 @@ function Navbar2() {
                                 <ListItem disableGutters>
                                     <ListItemButton>
                                         <Link to={"/about"} style={{textDecoration: 'none'}}>
-                                            <Typography sx={{color: 'black', display: 'block'}}>
+                                            <Typography sx={{color: 'black', display: 'block'}} style={{fontSize: '28px'}}>
                                                 About
                                             </Typography>
                                         </Link>
@@ -91,13 +141,15 @@ function Navbar2() {
                     </Link>
                 </Box>
 
-                <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}} style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
+                <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}
+                     style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
                     <Link to="/">
                         <img alt="Pen Product" src={logo} style={{height: "7vh", width: "13vh"}}/>
                     </Link>
                 </Box>
 
-                <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}} style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop:"3vh"}}>
+                <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}
+                     style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop: "3vh"}}>
                     <Link to="/">
                         <img alt="Pen Product" src={logo} style={{height: "12vh", width: "16vh"}}/>
                     </Link>
