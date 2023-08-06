@@ -5,20 +5,36 @@ import logo from "../resources/pen.png"
 import {Link} from "react-router-dom";
 import instagram from "../resources/instagram.png"
 import {
+    AppBar,
+    Box,
+    Button,
+    Collapse,
+    Dialog,
+    IconButton,
     List,
     ListItem,
     ListItemButton,
-    Dialog,
-    Button,
-    Typography,
-    IconButton,
+    Menu,
+    MenuItem,
     Toolbar,
-    Box,
-    AppBar
+    Typography,
 } from "@mui/material";
 
 function Navbar2() {
     const [open, setOpen] = React.useState(false);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const openMenu = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+    const [anchorEl2, setAnchorEl2] = React.useState(null);
+    const openMenu2 = Boolean(anchorEl2);
+    const handleClick2 = (event) => {
+        setAnchorEl2(!openMenu2);
+    };
 
     return (
         <AppBar position="static" style={{backgroundColor: 'white', width: '100%', marginTop: '3vh'}} elevation={0}>
@@ -49,7 +65,7 @@ function Navbar2() {
                         slotProps={{backdrop: {style: {backgroundColor: 'rgba(255,255,255,1)'}}}}
                         fullScreen={true}
                     >
-                        <Toolbar disableGutters style={{width:"100%", paddingTop: "3vh"}}>
+                        <Toolbar disableGutters style={{width: "100%", paddingTop: "3vh"}}>
                             <IconButton
                                 size="large"
                                 aria-label="account of current user"
@@ -86,16 +102,45 @@ function Navbar2() {
                         }}>
                             <List sx={{pt: 0}}>
                                 <ListItem disableGutters>
-                                    <ListItemButton sx={{color: 'black', display: 'block'}}>
-                                        <Typography style={{fontSize: '28px'}} >
+                                    <ListItemButton sx={{color: 'black', display: 'block'}} onClick={handleClick2}>
+                                        <Typography style={{fontSize: '28px'}}>
                                             Portfolio
                                         </Typography>
                                     </ListItemButton>
                                 </ListItem>
+                                <Collapse in={openMenu2} timeout="auto" unmountOnExit>
+                                    <List component="div" disablePadding>
+                                        <Link to={"/portrait"} style={{textDecoration: 'none'}}>
+                                            <ListItemButton sx={{pl: 4}}>
+                                                <Typography sx={{color: 'black', display: 'block'}}
+                                                            style={{fontSize: '22px'}}>
+                                                    Portrait
+                                                </Typography>
+                                            </ListItemButton>
+                                        </Link>
+                                        <Link to={"/lifestyle"} style={{textDecoration: 'none'}}>
+                                            <ListItemButton sx={{pl: 4}}>
+                                                <Typography sx={{color: 'black', display: 'block'}}
+                                                            style={{fontSize: '22px'}}>
+                                                    Lifestyle
+                                                </Typography>
+                                            </ListItemButton>
+                                        </Link>
+                                        <Link to={"/concert"} style={{textDecoration: 'none'}}>
+                                            <ListItemButton sx={{pl: 4}}>
+                                                <Typography sx={{color: 'black', display: 'block'}}
+                                                            style={{fontSize: '22px'}}>
+                                                    Concert
+                                                </Typography>
+                                            </ListItemButton>
+                                        </Link>
+                                    </List>
+                                </Collapse>
                                 <ListItem disableGutters>
                                     <ListItemButton>
                                         <Link to={"/colour-wheel"} style={{textDecoration: 'none'}}>
-                                            <Typography sx={{color: 'black', display: 'block'}} style={{fontSize: '28px'}}>
+                                            <Typography sx={{color: 'black', display: 'block'}}
+                                                        style={{fontSize: '28px'}}>
                                                 Colour Wheel
                                             </Typography>
 
@@ -105,7 +150,8 @@ function Navbar2() {
                                 <ListItem disableGutters>
                                     <ListItemButton>
                                         <Link to={"/about"} style={{textDecoration: 'none'}}>
-                                            <Typography sx={{color: 'black', display: 'block'}} style={{fontSize: '28px'}}>
+                                            <Typography sx={{color: 'black', display: 'block'}}
+                                                        style={{fontSize: '28px'}}>
                                                 About
                                             </Typography>
                                         </Link>
@@ -115,15 +161,53 @@ function Navbar2() {
                         </Box>
 
                     </Dialog>
+                    <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}
+                         style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
+                        <Link to="/">
+                            <img alt="Pen Product" src={logo} style={{height: "7vh", width: "13vh"}}/>
+                        </Link>
+                    </Box>
                 </Box>
 
                 <Box sx={{display: {xs: 'none', md: 'flex'}}} style={{position: 'absolute', left: '1.5vw'}}>
 
-                    <Button sx={{my: 2, mx: 2, color: 'black', display: 'block', paddingSide: '10vw'}}>
+                    <Button sx={{my: 2, mx: 2, color: 'black', display: 'block', paddingSide: '10vw'}}
+                            onClick={handleClick}>
                         <Typography style={{fontSize: '20px'}}>
                             Portfolio
                         </Typography>
                     </Button>
+                    <Menu
+                        id="basic-menu"
+                        anchorEl={anchorEl}
+                        open={openMenu}
+                        onClose={handleClose}
+                        MenuListProps={{
+                            'aria-labelledby': 'basic-button',
+                        }}
+                    >
+                        <MenuItem onClick={handleClose}>
+                            <Link to={"/portrait"} style={{textDecoration: 'none', color: 'inherit'}}>
+                                <Typography style={{fontSize: '20px'}}>
+                                    Portrait
+                                </Typography>
+                            </Link>
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                            <Link to={"/lifestyle"} style={{textDecoration: 'none', color: 'inherit'}}>
+                                <Typography style={{fontSize: '20px'}}>
+                                    Lifestyle
+                                </Typography>
+                            </Link>
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                            <Link to={"/concert"} style={{textDecoration: 'none', color: 'inherit'}}>
+                                <Typography style={{fontSize: '20px'}}>
+                                    Concert
+                                </Typography>
+                            </Link>
+                        </MenuItem>
+                    </Menu>
 
                     <Link to={"/colour-wheel"} style={{textDecoration: 'none', color: 'inherit'}}>
                         <Button sx={{my: 2, mx: 2, color: 'black', display: 'block'}}>
@@ -141,12 +225,7 @@ function Navbar2() {
                     </Link>
                 </Box>
 
-                <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}
-                     style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
-                    <Link to="/">
-                        <img alt="Pen Product" src={logo} style={{height: "7vh", width: "13vh"}}/>
-                    </Link>
-                </Box>
+
 
                 <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}
                      style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop: "3vh"}}>
