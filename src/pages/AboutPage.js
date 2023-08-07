@@ -15,8 +15,8 @@ class AboutPage extends React.Component {
                          style={{borderRadius:"2%", marginLeft:"2vw"}}/>
                     <Box style={{height:"80vh"}}>
                         <Typography
-                            style={{marginLeft: "2vw", marginRight: "2vw", position: "relative",
-                                top: "50%", transform: "translateY(-50%)", fontFamily:"Garamond"}}
+                            style={{marginLeft: "2vw", marginRight: "2vw", position: "relative", top: "50%",
+                                transform: "translateY(-50%)", fontFamily:"Garamond", fontSize:"20px"}}
                         >
                             Nicolas Cantin is a Chilean-Canadian portrait and concert photographer based in Montreal.
                             His work aims to capture and explore various aspects of the human experience such as passions

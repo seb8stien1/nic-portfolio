@@ -102,10 +102,10 @@ function Navbar2() {
                             left: "50%",
                             transform: 'translate(-50%, -50%)',
                         }}>
-                            <List sx={{pt: 0}}>
+                            <List sx={{pt: 0}} style={{width:"80vw"}}>
                                 <ListItem disableGutters>
                                     <ListItemButton sx={{color: 'black', display: 'block'}} onClick={handleClick2}>
-                                        <Typography style={{fontSize: '28px'}}>
+                                        <Typography style={{fontSize: '28px', fontFamily:"Couture"}}>
                                             Portfolio
                                         </Typography>
                                     </ListItemButton>
@@ -115,7 +115,7 @@ function Navbar2() {
                                         <Link to={"/portrait"} style={{textDecoration: 'none'}}>
                                             <ListItemButton sx={{pl: 4}}>
                                                 <Typography sx={{color: 'black', display: 'block'}}
-                                                            style={{fontSize: '22px'}}>
+                                                            style={{fontSize: '22px', fontFamily:"Couture"}}>
                                                     Portrait
                                                 </Typography>
                                             </ListItemButton>
@@ -123,7 +123,7 @@ function Navbar2() {
                                         <Link to={"/lifestyle"} style={{textDecoration: 'none'}}>
                                             <ListItemButton sx={{pl: 4}}>
                                                 <Typography sx={{color: 'black', display: 'block'}}
-                                                            style={{fontSize: '22px'}}>
+                                                            style={{fontSize: '22px', fontFamily:"Couture"}}>
                                                     Lifestyle
                                                 </Typography>
                                             </ListItemButton>
@@ -131,7 +131,7 @@ function Navbar2() {
                                         <Link to={"/concert"} style={{textDecoration: 'none'}}>
                                             <ListItemButton sx={{pl: 4}}>
                                                 <Typography sx={{color: 'black', display: 'block'}}
-                                                            style={{fontSize: '22px'}}>
+                                                            style={{fontSize: '22px', fontFamily:"Couture"}}>
                                                     Concert
                                                 </Typography>
                                             </ListItemButton>
@@ -142,7 +142,7 @@ function Navbar2() {
                                     <ListItemButton>
                                         <Link to={"/colour-wheel"} style={{textDecoration: 'none'}}>
                                             <Typography sx={{color: 'black', display: 'block'}}
-                                                        style={{fontSize: '28px'}}>
+                                                        style={{fontSize: '28px', fontFamily:"Couture"}}>
                                                 Colour Wheel
                                             </Typography>
 
@@ -153,7 +153,7 @@ function Navbar2() {
                                     <ListItemButton>
                                         <Link to={"/about"} style={{textDecoration: 'none'}}>
                                             <Typography sx={{color: 'black', display: 'block'}}
-                                                        style={{fontSize: '28px'}}>
+                                                        style={{fontSize: '28px', fontFamily:"Couture"}}>
                                                 About
                                             </Typography>
                                         </Link>
