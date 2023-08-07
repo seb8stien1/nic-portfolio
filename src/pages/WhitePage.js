@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import '../App.css';
 import Navbar from "../components/Navbar2";
-import p1 from "../resources/white/white1.jpeg"
+import p1 from "../resources/white/white1.jpg"
 import p2 from "../resources/white/white2.jpg"
-import p3 from "../resources/white/white3.jpeg"
-import p4 from "../resources/white/white4.jpeg"
-import p5 from "../resources/white/white5.jpeg"
+import p3 from "../resources/white/white3.jpg"
+import p4 from "../resources/white/white4.jpg"
+import p5 from "../resources/white/white5.jpg"
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 

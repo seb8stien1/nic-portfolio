@@ -136,3 +136,23 @@
   background-color: #ddd; /* Add a background color when hovering over a link */
   color: #000; /* Adjust the text color on hover */
 }
+
+@font-face {
+  font-family: "Couture";
+  src: url("./resources/font/couture-bld.woff") format('woff');
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("./resources/font/RobotoSlab-Regular.ttf") format('ttf');
+}
+@font-face {
+  font-family: "TitilliumWeb";
+  src: url("./resources/font/TitilliumWeb-Regular.ttf") format('ttf');
+}
+@font-face {
+  font-family: "Garamond";
+  src: url("./resources/font/Adobe Garamond Pro Regular.woff") format('woff');
+}
+.MuiTypography-root {
+  font-family: monospace;
+}

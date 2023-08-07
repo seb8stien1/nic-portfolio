@@ -19,6 +19,8 @@ import {
     Toolbar,
     Typography,
 } from "@mui/material";
+import '../App.css';
+
 
 function Navbar2() {
     const [open, setOpen] = React.useState(false);
@@ -40,7 +42,7 @@ function Navbar2() {
         <AppBar position="static" style={{backgroundColor: 'white', width: '100%', marginTop: '3vh'}} elevation={0}>
             <Toolbar disableGutters>
 
-                <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
+                <Box sx={{flexGrow: 1, display: {xs: 'flex', lg: 'none'}}}>
                     <IconButton
                         size="large"
                         aria-label="account of current user"
@@ -76,7 +78,7 @@ function Navbar2() {
                             >
                                 <CloseIcon style={{transform: "scale(1.2)"}}/>
                             </IconButton>
-                            <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}
+                            <Box sx={{flexGrow: 1, display: {xs: 'flex', lg: 'none'}}}
                                  style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
                                 <Link to="/">
                                     <img alt="Pen Product" src={logo} style={{height: "7vh", width: "13vh"}}/>
@@ -161,7 +163,7 @@ function Navbar2() {
                         </Box>
 
                     </Dialog>
-                    <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}
+                    <Box sx={{flexGrow: 1, display: {xs: 'flex', lg: 'none'}}}
                          style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
                         <Link to="/">
                             <img alt="Pen Product" src={logo} style={{height: "7vh", width: "13vh"}}/>
@@ -169,11 +171,11 @@ function Navbar2() {
                     </Box>
                 </Box>
 
-                <Box sx={{display: {xs: 'none', md: 'flex'}}} style={{position: 'absolute', left: '1.5vw'}}>
+                <Box sx={{display: {xs: 'none', lg: 'flex'}}} style={{position: 'absolute', left: '1.5vw'}}>
 
                     <Button sx={{my: 2, mx: 2, color: 'black', display: 'block', paddingSide: '10vw'}}
                             onClick={handleClick}>
-                        <Typography style={{fontSize: '20px'}}>
+                        <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
                             Portfolio
                         </Typography>
                     </Button>
@@ -186,48 +188,53 @@ function Navbar2() {
                             'aria-labelledby': 'basic-button',
                         }}
                     >
-                        <MenuItem onClick={handleClose}>
-                            <Link to={"/portrait"} style={{textDecoration: 'none', color: 'inherit'}}>
-                                <Typography style={{fontSize: '20px'}}>
-                                    Portrait
-                                </Typography>
-                            </Link>
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                            <Link to={"/lifestyle"} style={{textDecoration: 'none', color: 'inherit'}}>
-                                <Typography style={{fontSize: '20px'}}>
-                                    Lifestyle
-                                </Typography>
-                            </Link>
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                            <Link to={"/concert"} style={{textDecoration: 'none', color: 'inherit'}}>
-                                <Typography style={{fontSize: '20px'}}>
-                                    Concert
-                                </Typography>
-                            </Link>
-                        </MenuItem>
+                        <Link to={"/portrait"} style={{textDecoration: 'none', color: 'inherit'}}>
+                            <MenuItem onClick={handleClose}>
+                                <Button sx={{ mx: 2, color: 'black', display: 'block'}}>
+                                    <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
+                                        Portrait
+                                    </Typography>
+                                </Button>
+                            </MenuItem>
+                        </Link>
+                        <Link to={"/lifestyle"} style={{textDecoration: 'none', color: 'inherit'}}>
+                            <MenuItem onClick={handleClose}>
+                                <Button sx={{ mx: 2, color: 'black', display: 'block'}}>
+                                    <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
+                                        Lifestyle
+                                    </Typography>
+                                </Button>
+                            </MenuItem>
+                        </Link>
+                        <Link to={"/concert"} style={{textDecoration: 'none', color: 'inherit'}}>
+                            <MenuItem onClick={handleClose}>
+                                <Button sx={{ mx: 2, color: 'black', display: 'block'}}>
+                                    <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
+                                        Concert
+                                    </Typography>
+                                </Button>
+                            </MenuItem>
+                        </Link>
+
                     </Menu>
 
                     <Link to={"/colour-wheel"} style={{textDecoration: 'none', color: 'inherit'}}>
                         <Button sx={{my: 2, mx: 2, color: 'black', display: 'block'}}>
-                            <Typography style={{fontSize: '20px'}}>
+                            <Typography style={{fontSize: '20px', fontFamily: "Couture"}}>
                                 Colour Wheel
                             </Typography>
                         </Button>
                     </Link>
-                    <Link to={"/about"} style={{textDecoration: 'none', color: 'inherit'}}>
-                        <Button sx={{my: 2, mx: 2, color: 'black', display: 'block'}}>
-                            <Typography style={{fontSize: '20px'}}>
+                    <Link to={"/about"} style={{textDecoration: 'none'}}>
+                        <Button sx={{my: 2, mx: 2, color: 'black'}}>
+                            <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
                                 About
                             </Typography>
                         </Button>
                     </Link>
                 </Box>
 
-
-
-                <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}
+                <Box sx={{flexGrow: 1, display: {xs: 'none', lg: 'flex'}}}
                      style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop: "3vh"}}>
                     <Link to="/">
                         <img alt="Pen Product" src={logo} style={{height: "12vh", width: "16vh"}}/>
