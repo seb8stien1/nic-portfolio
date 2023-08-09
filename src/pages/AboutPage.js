@@ -27,8 +27,8 @@ class AboutPage extends React.Component {
                         </Typography>
                     </Box>
                 </Box>
-                <Box sx={{display: {xs:"grid", md: "none"}}} style={{marginTop: "8vh"}}>
-                    <img src={require("../resources/about/about2.jpg")} alt={"nic2"} width="300px"
+                <Box sx={{display: {xs:"grid", md: "none"}}} style={{marginTop: "5vh", marginBottom:"2vh"}}>
+                    <img src={require("../resources/about/about1.jpg")} alt={"nic2"} width="320px"
                          style={{position: "relative", left:"50%", transform:"translateX(-50%)", borderRadius:"2%"}}/>
                     <Typography style={{marginLeft: "2vw", marginRight: "2vw", fontFamily:"Garamond", marginTop: "3vh"}}>
                         Nicolas Cantin is a Chilean-Canadian portrait and concert photographer based in Montreal.

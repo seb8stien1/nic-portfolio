@@ -39,6 +39,7 @@ function Navbar2() {
     };
 
     return (
+
         <AppBar position="static" style={{backgroundColor: 'white', width: '100%', marginTop: '3vh'}} elevation={0}>
             <Toolbar disableGutters>
 
@@ -120,19 +121,19 @@ function Navbar2() {
                                                 </Typography>
                                             </ListItemButton>
                                         </Link>
-                                        <Link to={"/lifestyle"} style={{textDecoration: 'none'}}>
-                                            <ListItemButton sx={{pl: 4}}>
-                                                <Typography sx={{color: 'black', display: 'block'}}
-                                                            style={{fontSize: '22px', fontFamily:"Couture"}}>
-                                                    Lifestyle
-                                                </Typography>
-                                            </ListItemButton>
-                                        </Link>
                                         <Link to={"/concert"} style={{textDecoration: 'none'}}>
                                             <ListItemButton sx={{pl: 4}}>
                                                 <Typography sx={{color: 'black', display: 'block'}}
                                                             style={{fontSize: '22px', fontFamily:"Couture"}}>
                                                     Concert
+                                                </Typography>
+                                            </ListItemButton>
+                                        </Link>
+                                        <Link to={"/cuba"} style={{textDecoration: 'none'}}>
+                                            <ListItemButton sx={{pl: 4}}>
+                                                <Typography sx={{color: 'black', display: 'block'}}
+                                                            style={{fontSize: '22px', fontFamily:"Couture"}}>
+                                                    Cuba
                                                 </Typography>
                                             </ListItemButton>
                                         </Link>
@@ -197,15 +198,6 @@ function Navbar2() {
                                 </Button>
                             </MenuItem>
                         </Link>
-                        <Link to={"/lifestyle"} style={{textDecoration: 'none', color: 'inherit'}}>
-                            <MenuItem onClick={handleClose}>
-                                <Button sx={{ mx: 2, color: 'black', display: 'block'}}>
-                                    <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
-                                        Lifestyle
-                                    </Typography>
-                                </Button>
-                            </MenuItem>
-                        </Link>
                         <Link to={"/concert"} style={{textDecoration: 'none', color: 'inherit'}}>
                             <MenuItem onClick={handleClose}>
                                 <Button sx={{ mx: 2, color: 'black', display: 'block'}}>
@@ -215,9 +207,16 @@ function Navbar2() {
                                 </Button>
                             </MenuItem>
                         </Link>
-
+                        <Link to={"/cuba"} style={{textDecoration: 'none', color: 'inherit'}}>
+                            <MenuItem onClick={handleClose}>
+                                <Button sx={{ mx: 2, color: 'black', display: 'block'}}>
+                                    <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
+                                        cuba
+                                    </Typography>
+                                </Button>
+                            </MenuItem>
+                        </Link>
                     </Menu>
-
                     <Link to={"/colour-wheel"} style={{textDecoration: 'none', color: 'inherit'}}>
                         <Button sx={{my: 2, mx: 2, color: 'black', display: 'block'}}>
                             <Typography style={{fontSize: '20px', fontFamily: "Couture"}}>
@@ -241,7 +240,7 @@ function Navbar2() {
                     </Link>
                 </Box>
 
-                <Box style={{position: 'absolute', right: '1.5vw'}}>
+                <Box style={{position: 'absolute', right: '1.5vw', transform:"translateY(8%)"}}>
                     <Link to={"https://www.instagram.com/penproduct/"}
                           style={{textDecoration: 'none', color: 'inherit'}}>
                         <img src={instagram} alt="instagram" style={{height: '4vh'}}/>

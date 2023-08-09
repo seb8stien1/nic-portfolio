@@ -16,7 +16,7 @@ import BluePage from './pages/BluePage';
 import BlackWhitePage from './pages/BlackWhitePage';
 import PortraitPage from './pages/PortraitPage'
 import ConcertPage from './pages/ConcertPage'
-import LifestylePage from './pages/LifestylePage'
+import CubaPage from './pages/CubaPage'
 
 function App() {
     return (
@@ -32,7 +32,7 @@ function App() {
                 <Route path='/orange' element={<OrangePage />} />
                 <Route path='/black-white' element={<BlackWhitePage />} />
                 <Route path='/portrait' element={<PortraitPage />}/>
-                <Route path='/lifestyle' element={<LifestylePage />}/>
+                <Route path='/cuba' element={<CubaPage />}/>
                 <Route path='/concert' element={<ConcertPage />}/>
             </Routes>
         </Router>
