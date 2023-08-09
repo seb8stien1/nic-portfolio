@@ -20,7 +20,7 @@ function GreenPage () {
 
     return (
         <div>
-            <Navbar/>
+            <Navbar page={"colour"}/>
             <ImageDisplay photos={photos} />
         </div>
     );

@@ -22,7 +22,7 @@ import {
 import '../App.css';
 
 
-function Navbar2() {
+function Navbar2(props) {
     const [open, setOpen] = React.useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const openMenu = Boolean(anchorEl);
@@ -50,7 +50,7 @@ function Navbar2() {
                         aria-controls="menu-appbar"
                         aria-haspopup="true"
                         onClick={() => setOpen(true)}
-                        style={{color: 'black'}}
+                        style={{color: 'black', background:"transparent"}}
                     >
                         <MenuIcon style={{transform: "scale(1.2)"}}/>
                     </IconButton>
@@ -75,7 +75,7 @@ function Navbar2() {
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
                                 onClick={() => setOpen(false)}
-                                style={{color: 'black'}}
+                                style={{color: 'black', background:"transparent"}}
                             >
                                 <CloseIcon style={{transform: "scale(1.2)"}}/>
                             </IconButton>
@@ -105,8 +105,13 @@ function Navbar2() {
                         }}>
                             <List sx={{pt: 0}} style={{width:"80vw"}}>
                                 <ListItem disableGutters>
-                                    <ListItemButton sx={{color: 'black', display: 'block'}} onClick={handleClick2}>
-                                        <Typography style={{fontSize: '28px', fontFamily:"Couture"}}>
+                                    <ListItemButton sx={{color: 'black', display: 'block'}} onClick={handleClick2}
+                                                    style={{background:"transparent"}}>
+                                        <Typography style={{fontSize: '28px', fontFamily:"Couture"}}
+                                                    sx={
+                                                        props.page === "portrait" || props.page === "cuba" || props.page === "concert"
+                                                            ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                                    }>
                                             Portfolio
                                         </Typography>
                                     </ListItemButton>
@@ -114,25 +119,37 @@ function Navbar2() {
                                 <Collapse in={openMenu2} timeout="auto" unmountOnExit>
                                     <List component="div" disablePadding>
                                         <Link to={"/portrait"} style={{textDecoration: 'none'}}>
-                                            <ListItemButton sx={{pl: 4}}>
-                                                <Typography sx={{color: 'black', display: 'block'}}
-                                                            style={{fontSize: '22px', fontFamily:"Couture"}}>
+                                            <ListItemButton sx={{pl: 4, color: 'black', display: 'block'}}
+                                                            style={{background:"transparent"}}>
+                                                <Typography style={{fontSize: '22px', fontFamily:"Couture"}}
+                                                            sx={
+                                                                props.page === "portrait"
+                                                                    ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                                            }>
                                                     Portrait
                                                 </Typography>
                                             </ListItemButton>
                                         </Link>
                                         <Link to={"/concert"} style={{textDecoration: 'none'}}>
-                                            <ListItemButton sx={{pl: 4}}>
-                                                <Typography sx={{color: 'black', display: 'block'}}
-                                                            style={{fontSize: '22px', fontFamily:"Couture"}}>
+                                            <ListItemButton sx={{pl: 4, color: 'black', display: 'block'}}
+                                                            style={{background:"transparent"}}>
+                                                <Typography style={{fontSize: '22px', fontFamily:"Couture"}}
+                                                            sx={
+                                                                props.page === "concert"
+                                                                    ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                                            }>
                                                     Concert
                                                 </Typography>
                                             </ListItemButton>
                                         </Link>
                                         <Link to={"/cuba"} style={{textDecoration: 'none'}}>
-                                            <ListItemButton sx={{pl: 4}}>
-                                                <Typography sx={{color: 'black', display: 'block'}}
-                                                            style={{fontSize: '22px', fontFamily:"Couture"}}>
+                                            <ListItemButton sx={{pl: 4, color: 'black', display: 'block'}}
+                                                            style={{background:"transparent"}}>
+                                                <Typography style={{fontSize: '22px', fontFamily:"Couture"}}
+                                                            sx={
+                                                                props.page === "cuba"
+                                                                    ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                                            }>
                                                     Cuba
                                                 </Typography>
                                             </ListItemButton>
@@ -140,25 +157,32 @@ function Navbar2() {
                                     </List>
                                 </Collapse>
                                 <ListItem disableGutters>
-                                    <ListItemButton>
-                                        <Link to={"/colour-wheel"} style={{textDecoration: 'none'}}>
-                                            <Typography sx={{color: 'black', display: 'block'}}
-                                                        style={{fontSize: '28px', fontFamily:"Couture"}}>
+                                    <Link to={"/colour-wheel"} style={{textDecoration: 'none', width: "100%"}}>
+                                        <ListItemButton sx={{color: 'black', display: 'block'}}
+                                                        style={{background:"transparent"}}>
+                                            <Typography style={{fontSize: '28px', fontFamily:"Couture"}}
+                                                        sx={
+                                                            props.page === "colour"
+                                                                ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                                        }>
                                                 Colour Wheel
                                             </Typography>
-
-                                        </Link>
-                                    </ListItemButton>
+                                        </ListItemButton>
+                                    </Link>
                                 </ListItem>
                                 <ListItem disableGutters>
-                                    <ListItemButton>
-                                        <Link to={"/about"} style={{textDecoration: 'none'}}>
-                                            <Typography sx={{color: 'black', display: 'block'}}
-                                                        style={{fontSize: '28px', fontFamily:"Couture"}}>
+                                    <Link to={"/about"} style={{textDecoration: 'none', width: "100%"}}>
+                                        <ListItemButton sx={{color: 'black', display: 'block'}}
+                                                        style={{background:"transparent"}}>
+                                            <Typography style={{fontSize: '28px', fontFamily:"Couture"}}
+                                                        sx={
+                                                            props.page === "about"
+                                                                ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                                        }>
                                                 About
                                             </Typography>
-                                        </Link>
-                                    </ListItemButton>
+                                        </ListItemButton>
+                                    </Link>
                                 </ListItem>
                             </List>
                         </Box>
@@ -175,8 +199,14 @@ function Navbar2() {
                 <Box sx={{display: {xs: 'none', lg: 'flex'}}} style={{position: 'absolute', left: '1.5vw'}}>
 
                     <Button sx={{my: 2, mx: 2, color: 'black', display: 'block', paddingSide: '10vw'}}
-                            onClick={handleClick}>
-                        <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
+                            onClick={handleClick} style={{background:"transparent"}}
+                    >
+                        <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
+                                    sx={
+                                        props.page === "portrait" || props.page === "cuba" || props.page === "concert"
+                                            ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                    }
+                        >
                             Portfolio
                         </Typography>
                     </Button>
@@ -191,8 +221,13 @@ function Navbar2() {
                     >
                         <Link to={"/portrait"} style={{textDecoration: 'none', color: 'inherit'}}>
                             <MenuItem onClick={handleClose}>
-                                <Button sx={{ mx: 2, color: 'black', display: 'block'}}>
-                                    <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
+                                <Button sx={{ mx: 2, color: 'black', display: 'block'}}
+                                        style={{background:"transparent"}}>
+                                    <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
+                                                sx={
+                                                    props.page === "portrait"
+                                                        ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                                }>
                                         Portrait
                                     </Typography>
                                 </Button>
@@ -200,8 +235,13 @@ function Navbar2() {
                         </Link>
                         <Link to={"/concert"} style={{textDecoration: 'none', color: 'inherit'}}>
                             <MenuItem onClick={handleClose}>
-                                <Button sx={{ mx: 2, color: 'black', display: 'block'}}>
-                                    <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
+                                <Button sx={{ mx: 2, color: 'black', display: 'block'}}
+                                        style={{background:"transparent"}}>
+                                    <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
+                                                sx={
+                                                    props.page === "concert"
+                                                        ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                                }>
                                         Concert
                                     </Typography>
                                 </Button>
@@ -209,8 +249,13 @@ function Navbar2() {
                         </Link>
                         <Link to={"/cuba"} style={{textDecoration: 'none', color: 'inherit'}}>
                             <MenuItem onClick={handleClose}>
-                                <Button sx={{ mx: 2, color: 'black', display: 'block'}}>
-                                    <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
+                                <Button sx={{ mx: 2, color: 'black', display: 'block'}}
+                                        style={{background:"transparent"}}>
+                                    <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
+                                                sx={
+                                                    props.page === "cuba"
+                                                        ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                                }>
                                         cuba
                                     </Typography>
                                 </Button>
@@ -218,15 +263,27 @@ function Navbar2() {
                         </Link>
                     </Menu>
                     <Link to={"/colour-wheel"} style={{textDecoration: 'none', color: 'inherit'}}>
-                        <Button sx={{my: 2, mx: 2, color: 'black', display: 'block'}}>
-                            <Typography style={{fontSize: '20px', fontFamily: "Couture"}}>
+                        <Button sx={{my: 2, mx: 2, color: 'black', display: 'block'}}
+                                style={{background:"transparent"}}>
+                            <Typography
+                                style={{fontSize: '20px', fontFamily: "Couture"}}
+                                sx={
+                                props.page === "colour"
+                                    ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                }
+                            >
                                 Colour Wheel
                             </Typography>
                         </Button>
                     </Link>
                     <Link to={"/about"} style={{textDecoration: 'none'}}>
-                        <Button sx={{my: 2, mx: 2, color: 'black'}}>
-                            <Typography style={{fontSize: '20px', fontFamily:"Couture"}}>
+                        <Button sx={{my: 2, mx: 2, color: 'black'}}
+                                style={{background:"transparent"}}>
+                            <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
+                                        sx={
+                                            props.page === "about"
+                                                ? {textDecoration: 'underline', textDecorationThickness: "3px"} : {}
+                                        }>
                                 About
                             </Typography>
                         </Button>

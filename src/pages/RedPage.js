@@ -53,7 +53,7 @@ function RedPage()  {
 
     return (
         <div>
-            <Navbar/>
+            <Navbar page={"colour"}/>
             <ImageDisplay photos={photos} />
         </div>
     );

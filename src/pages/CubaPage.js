@@ -23,7 +23,7 @@ function CubaPage()  {
 
     return (
         <div>
-            <Navbar/>
+            <Navbar page={'cuba'}/>
             <ImageDisplay photos={photos} />
         </div>
     );

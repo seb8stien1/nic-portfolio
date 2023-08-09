@@ -9,7 +9,7 @@ class AboutPage extends React.Component {
 
         return (
             <div>
-                <Navbar/>
+                <Navbar page={'about'}/>
                 <Box sx={{display: {xs:"none", md: "flex"}}} style={{marginTop: "8vh", height: "80vh"}}>
                     <img src={require("../resources/about/about1.jpg")} alt={"nic"} height="100%"
                          style={{borderRadius:"2%", marginLeft:"2vw"}}/>

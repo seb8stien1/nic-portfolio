@@ -8,7 +8,7 @@ class ColourWheel extends React.Component {
 
         return (
             <div>
-                <Navbar/>
+                <Navbar page={"colour"}/>
                 <div className="content">
                     <Box sx={{display: {xs: 'flex', md:'none'}}} style={{position: 'absolute', left: '50vw', top:'50vh', transform: 'translate(-50%, -50%)'}}>
                         <CircleImages imageSize={"27vw"} elementHeight={"90vw"} elementWidth={"90vw"}/>

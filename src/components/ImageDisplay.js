@@ -8,7 +8,7 @@ export default function ImageDisplay(props) {
     return(
     <div style={{marginLeft:"3vw", marginRight:"3vw", marginTop:"5vh", marginBottom:"2vh"}}>
 
-        <PhotoAlbum layout="columns" photos={props.photos}
+        <PhotoAlbum layout="rows" photos={props.photos}
                     padding={(containerWidth) => {
                         if (containerWidth < 846) return 0;
                         return "25";
@@ -16,6 +16,10 @@ export default function ImageDisplay(props) {
                     columns={(containerWidth) => {
                         if (containerWidth < 846) return 2;
                         return 3;
+                    }}
+                    rowConstraints={(containerWidth) => {
+                        if (containerWidth < 846) return {maxPhotos:2};
+                        return {maxPhotos: 3};
                     }}
                     onClick={({ index }) => setIndex(index)} />
         <Lightbox

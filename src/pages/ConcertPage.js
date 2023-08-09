@@ -42,7 +42,7 @@ function ConcertPage()  {
 
     return (
         <div>
-            <Navbar/>
+            <Navbar page={'concert'}/>
             <ImageDisplay photos={photos} />
         </div>
     );

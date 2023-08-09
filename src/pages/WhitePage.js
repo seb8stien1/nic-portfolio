@@ -20,7 +20,7 @@ function WhitePage () {
 
     return (
         <div>
-            <Navbar/>
+            <Navbar page={"colour"}/>
             <ImageDisplay photos={photos} />
         </div>
     );

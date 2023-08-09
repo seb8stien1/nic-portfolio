@@ -59,7 +59,7 @@ function PortraitPage()  {
 
     return (
         <div>
-            <Navbar/>
+            <Navbar page={'portrait'}/>
             <ImageDisplay photos={photos} />
         </div>
     );

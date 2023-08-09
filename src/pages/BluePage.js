@@ -40,7 +40,7 @@ function BluePage () {
 
     return (
         <div>
-            <Navbar/>
+            <Navbar page={"colour"}/>
             <ImageDisplay photos={photos} />
         </div>
     );

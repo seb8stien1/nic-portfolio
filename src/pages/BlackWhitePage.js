@@ -100,7 +100,7 @@ function BlackWhitePage (props) {
     return (
         <React.Fragment>
         <div>
-            <Navbar/>
+            <Navbar page={"colour"}/>
             <ImageDisplay photos={photos} />
             <ScrollTop {...props}>
                 <Fab size="small" aria-label="scroll back to top">
