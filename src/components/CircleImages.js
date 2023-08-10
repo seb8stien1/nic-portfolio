@@ -19,7 +19,13 @@ const CircleImages = () => {
     ];
 
     return (
-            <div className="circle-container" style={{aspectRatio:"1 / 1", maxWidth:"80vw", maxHeight:"80vh", marginTop: "10vh", marginLeft: "calc(max(10vw, 10vw + (80vw - 80vh) / 2))"}}>
+            <div className="circle-container"
+                 style=
+                     {{aspectRatio:"1 / 1",
+                         maxWidth:"80vw",
+                         maxHeight:"80vh",
+                         marginTop: "calc(max(10vh, (80vh - 80vw) / 2))",
+                         marginLeft: "calc(max(10vw, 10vw + (80vw - 80vh) / 2))"}}>
                 {images.map((image, index) => (
                     <Link to={'/'+image.alt}>
                         <img
