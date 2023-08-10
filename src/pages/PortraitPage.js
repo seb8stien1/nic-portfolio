@@ -10,7 +10,7 @@ const photos = [
     {src:require("../resources/portrait/portrait4.jpg"), width: 1000, height: 667},
     {src:require("../resources/portrait/portrait5.jpg"), width: 663, height: 1000},
     {src:require("../resources/portrait/portrait6.jpg"), width: 667, height: 1000},
-    {src:require("../resources/portrait/portrait7.jpg"), width: 663, height: 750},
+    {src:require("../resources/portrait/portrait7.jpg"), width: 663, height: 1000},
     {src:require("../resources/portrait/portrait8.jpg"), width: 1000, height: 663},
     {src:require("../resources/portrait/portrait9.jpg"), width: 663, height: 1000},
     {src:require("../resources/portrait/portrait10.jpg"), width: 675, height: 1000},

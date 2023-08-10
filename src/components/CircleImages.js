@@ -8,8 +8,7 @@ import green from '../resources/green.png';
 import white from "../resources/white.png";
 import {Link} from "react-router-dom";
 
-const CircleImages = (props) => {
-    const { imageSize, elementHeight, elementWidth } = props;
+const CircleImages = () => {
     const images = [
         { src: blue, alt: 'blue' },
         { src: red, alt: 'red' },
@@ -20,19 +19,19 @@ const CircleImages = (props) => {
     ];
 
     return (
-        <div className="circle-container" style={{maxWidth:elementWidth, height:elementHeight}}>
-            {images.map((image, index) => (
-                <Link to={'/'+image.alt}>
-                    <img
-                        key={index}
-                        src={image.src}
-                        alt={image.alt}
-                        className={`circle-image circle-image-${index}`}
-                        style={{maxWidth:imageSize, maxHeight:imageSize}}
-                    />
-                </Link>
-            ))}
-        </div>
+            <div className="circle-container" style={{aspectRatio:"1 / 1", maxWidth:"80vw", maxHeight:"80vh", marginTop: "10vh", marginLeft: "calc(max(10vw, 10vw + (80vw - 80vh) / 2))"}}>
+                {images.map((image, index) => (
+                    <Link to={'/'+image.alt}>
+                        <img
+                            key={index}
+                            src={image.src}
+                            alt={image.alt}
+                            className={`circle-image circle-image-${index}`}
+                            style={{maxWidth: "30%", maxHeight:"30%"}}
+                        />
+                    </Link>
+                ))}
+            </div>
     );
 };
 

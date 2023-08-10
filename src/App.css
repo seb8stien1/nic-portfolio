@@ -45,13 +45,10 @@
 
 .circle-container {
   position: relative;
-  width: 90vw; /* Adjust the width as needed */
-  height: 50vh; /* Adjust the height as needed */
 }
 
 .circle-image {
   position: absolute;
-
 }
 
 .circle-image:hover {
@@ -152,6 +149,14 @@
 @font-face {
   font-family: "Garamond";
   src: url("./resources/font/Adobe Garamond Pro Regular.woff") format('woff');
+}
+@font-face {
+  font-family: "Garamond italic";
+  src: url("./resources/font/EBGaramond-Italic.woff") format('woff');
+}
+@font-face {
+  font-family: "Garamond bold";
+  src: url("./resources/font/EBGaramond-SemiBold.woff") format('woff');
 }
 .MuiTypography-root {
   font-family: monospace;

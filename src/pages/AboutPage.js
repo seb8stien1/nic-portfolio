@@ -20,10 +20,13 @@ class AboutPage extends React.Component {
                         >
                             Nicolas Cantin is a Chilean-Canadian portrait and concert photographer based in Montreal.
                             His work aims to capture and explore various aspects of the human experience such as passions
-                            and identity, as well as to document the world around him using various tools to bring his
-                            vision to life. Nicolas practices film photography as well as digital
+                            and identity, as well as to document the world around him using his camera shooting both film and digital to bring his vision
+                            to life. Nicolas is interested in creating art capable of trandscending an aesthetic and that
+                            can have a lasting impact on his audience.
                             <br/><br/>
+                            <Typography style={{fontFamily: 'Garamond bold', fontSize:"20px"}}>
                             Contact: penproduct1@gmail.com
+                            </Typography>
                         </Typography>
                     </Box>
                 </Box>
@@ -33,8 +36,9 @@ class AboutPage extends React.Component {
                     <Typography style={{marginLeft: "2vw", marginRight: "2vw", fontFamily:"Garamond", marginTop: "3vh"}}>
                         Nicolas Cantin is a Chilean-Canadian portrait and concert photographer based in Montreal.
                         His work aims to capture and explore various aspects of the human experience such as passions
-                        and identity, as well as to document the world around him using various tools to bring his
-                        vision to life. Nicolas practices film photography as well as digital.
+                        and identity, as well as to document the world around him using his camera shooting both film and digital to bring his vision
+                        to life. Nicolas is interested in creating art capable of trandscending an aesthetic and that
+                        can have a lasting impact on his audience.
                         <br/><br/>
                         Contact: penproduct1@gmail.com
                     </Typography>
