@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar2";
 import ImageDisplay from "../components/ImageDisplay";
 
 const photos = [
+    {src:require("../resources/blue/blue13.jpg"), width: 5626, height: 3751},
     {src:require("../resources/blue/blue2.jpg"), width: 3776, height: 5653},
     {src:require("../resources/blue/blue3.jpg"), width: 3000, height: 3871},
     {src:require("../resources/blue/blue4.jpg"), width: 4000, height: 3000},
@@ -15,7 +16,7 @@ const photos = [
     {src:require("../resources/blue/blue10.jpg"), width: 5565, height: 3710},
     {src:require("../resources/blue/blue11.jpg"), width: 3173, height: 3966},
     {src:require("../resources/blue/blue12.jpg"), width: 3091, height: 2048},
-    {src:require("../resources/blue/blue13.jpg"), width: 5626, height: 3751},
+
     {src:require("../resources/blue/blue14.jpg"), width: 3840, height: 5760},
     {src:require("../resources/blue/blue15.jpg"), width: 5760, height: 3840},
     {src:require("../resources/blue/blue16.jpg"), width: 2327, height: 3491},
