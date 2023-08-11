@@ -11,8 +11,8 @@ import ImageDisplay from "../components/ImageDisplay";
 
 const photos = [
     {src:p1, width: 1900, height: 2868},
-    {src:p2, width: 2702, height: 3377},
     {src:p3, width: 3346, height: 2234},
+    {src:p2, width: 2702, height: 3377},
     {src:p4, width: 5760, height: 3840},
     {src:p5, width: 3087, height: 3859},
 ]
