@@ -220,7 +220,7 @@ function Navbar2(props) {
                         }}
                     >
                         <Link to={"/portrait"} style={{textDecoration: 'none', color: 'inherit'}}>
-                            <MenuItem onClick={handleClose} style={{background:"transparent"}}>
+                            <MenuItem onClick={handleClose} style={{background:"transparent"}} disableRipple>
                                 <Button sx={{ mx: 2, color: 'black', display: 'block'}}
                                         style={{background:"transparent"}} disableRipple>
                                     <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
@@ -234,7 +234,7 @@ function Navbar2(props) {
                             </MenuItem>
                         </Link>
                         <Link to={"/concert"} style={{textDecoration: 'none', color: 'inherit'}}>
-                            <MenuItem onClick={handleClose} style={{background:"transparent"}}>
+                            <MenuItem onClick={handleClose} style={{background:"transparent"}} disableRipple>
                                 <Button sx={{ mx: 2, color: 'black', display: 'block'}}
                                         style={{background:"transparent"}} disableRipple>
                                     <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
@@ -248,7 +248,7 @@ function Navbar2(props) {
                             </MenuItem>
                         </Link>
                         <Link to={"/cuba"} style={{textDecoration: 'none', color: 'inherit'}}>
-                            <MenuItem onClick={handleClose} style={{background:"transparent"}}>
+                            <MenuItem onClick={handleClose} style={{background:"transparent"}} disableRipple>
                                 <Button sx={{ mx: 2, color: 'black', display: 'block'}}
                                         style={{background:"transparent"}} disableRipple>
                                     <Typography style={{fontSize: '20px', fontFamily:"Couture"}}

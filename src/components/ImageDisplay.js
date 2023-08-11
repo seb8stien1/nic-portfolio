@@ -8,21 +8,36 @@ export default function ImageDisplay(props) {
     return(
     //     todo:lazy load images
     <div style={{marginLeft:"3vw", marginRight:"3vw", marginBottom:"2vh"}}>
-        <PhotoAlbum layout="columns"
-                    photos={props.photos}
-                    padding={(containerWidth) => {
-                        if (containerWidth < 846) return 0;
-                        return "25";
+        <PhotoAlbum
+            renderPhoto= {({ layout, layoutOptions, imageProps: { alt, style, ...restImageProps } }) => (
+                <div
+                    style={{
+                        boxSizing: "content-box",
+                        alignItems: "center",
+                        width: style?.width,
+                        padding: `${layoutOptions.padding - 2}px`,
+                        paddingBottom: 0,
                     }}
-                    columns={(containerWidth) => {
-                        if (containerWidth < 846) return 2;
-                        return 3;
-                    }}
-                    rowConstraints={(containerWidth) => {
-                        if (containerWidth < 846) return {maxPhotos:2};
-                        return {maxPhotos: 3};
-                    }}
-                    onClick={({ index }) => setIndex(index)} />
+                >
+                    <img loading="lazy" alt={alt} style={{ ...style, width: "100%", padding: 0 }} {...restImageProps}/>
+                </div>
+            )}
+            layout="columns"
+            photos={props.photos}
+            padding={(containerWidth) => {
+                if (containerWidth < 1128) return 0;
+                return "25";
+            }}
+            columns={(containerWidth) => {
+                if (containerWidth < 1128) return 2;
+                return 3;
+            }}
+            rowConstraints={(containerWidth) => {
+                if (containerWidth < 846) return {maxPhotos:2};
+                return {maxPhotos: 3};
+            }}
+            onClick={({ index }) => setIndex(index)}
+        />
         <Lightbox
             slides={props.photos}
             open={index >= 0}
