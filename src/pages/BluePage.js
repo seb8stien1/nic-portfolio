@@ -8,11 +8,9 @@ const photos = [
     {src:require("../resources/blue/blue2.jpg"), width: 3776, height: 5653},
     {src:require("../resources/blue/blue3.jpg"), width: 3000, height: 3871},
     {src:require("../resources/blue/blue4.jpg"), width: 4000, height: 3000},
-    {src:require("../resources/blue/blue5.jpg"), width: 3000, height: 4000},
     {src:require("../resources/blue/blue6.jpg"), width: 2480, height: 3306},
     {src:require("../resources/blue/blue7.jpg"), width: 4000, height: 3000},
     {src:require("../resources/blue/blue8.jpg"), width: 2472, height: 3090},
-    {src:require("../resources/blue/blue9.jpg"), width: 4000, height: 3000},
     {src:require("../resources/blue/blue10.jpg"), width: 5565, height: 3710},
     {src:require("../resources/blue/blue11.jpg"), width: 3173, height: 3966},
     {src:require("../resources/blue/blue12.jpg"), width: 3091, height: 2048},
@@ -23,7 +21,6 @@ const photos = [
     {src:require("../resources/blue/blue17.jpg"), width: 3840, height: 5760},
     {src:require("../resources/blue/blue18.jpg"), width: 5641, height: 3761},
     {src:require("../resources/blue/blue19.jpg"), width: 3622, height: 4528},
-    {src:require("../resources/blue/blue20.jpg"), width: 3384, height: 4230},
     {src:require("../resources/blue/blue22.jpg"), width: 5760, height: 3840},
     {src:require("../resources/blue/blue23.jpg"), width: 5465, height: 3643},
     {src:require("../resources/blue/blue24.jpg"), width: 3694, height: 4618},
@@ -42,7 +39,7 @@ function BluePage () {
     return (
         <div>
             <Navbar page={"colour"}/>
-            <ImageDisplay photos={photos} />
+            <ImageDisplay photos={photos} photos2={photos} />
         </div>
     );
 }

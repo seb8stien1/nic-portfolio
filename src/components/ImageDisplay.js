@@ -7,8 +7,8 @@ export default function ImageDisplay(props) {
 
     return(
     <div style={{marginLeft:"3vw", marginRight:"3vw", marginTop:"5vh", marginBottom:"2vh"}}>
-
-        <PhotoAlbum layout="rows" photos={props.photos}
+        <PhotoAlbum layout="columns"
+                    photos={props.photos}
                     padding={(containerWidth) => {
                         if (containerWidth < 846) return 0;
                         return "25";

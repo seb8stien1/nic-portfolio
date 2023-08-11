@@ -2,9 +2,6 @@
 import React from 'react';
 import '../App.css';
 import Navbar from "../components/Navbar2";
-import { useScrollTrigger, Fab, Fade, Box} from "@mui/material";
-import PropTypes from 'prop-types';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import ImageDisplay from "../components/ImageDisplay";
 
 const photos = [
@@ -66,49 +63,14 @@ const photos = [
 
 ]
 
-function ScrollTop(props) {
-    const { children } = props;
-
-    const trigger = useScrollTrigger({
-        disableHysteresis: true,
-        threshold: 100,
-    });
-
-    const handleClick = (event) => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-    };
-
-    return (
-        <Fade in={trigger}>
-            <Box
-                onClick={handleClick}
-                role="presentation"
-                sx={{ position: 'fixed', bottom: 16, right: 16 }}
-            >
-                {children}
-            </Box>
-        </Fade>
-    );
-}
-
-ScrollTop.propTypes = {
-    children: PropTypes.element.isRequired,
-};
-
 function BlackWhitePage (props) {
 
     return (
-        <React.Fragment>
         <div>
             <Navbar page={"colour"}/>
-            <ImageDisplay photos={photos} />
-            <ScrollTop {...props}>
-                <Fab size="small" aria-label="scroll back to top">
-                    <KeyboardArrowUpIcon />
-                </Fab>
-            </ScrollTop>
+            <ImageDisplay photos={photos} photos2={photos}/>
+
         </div>
-        </React.Fragment>
     );
 }
 

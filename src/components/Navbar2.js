@@ -106,7 +106,7 @@ function Navbar2(props) {
                             <List sx={{pt: 0}} style={{width:"80vw"}}>
                                 <ListItem disableGutters>
                                     <ListItemButton sx={{color: 'black', display: 'block'}} onClick={handleClick2}
-                                                    style={{background:"transparent"}}>
+                                                    style={{background:"transparent"}} disableRipple>
                                         <Typography style={{fontSize: '28px', fontFamily:"Couture"}}
                                                     sx={
                                                         props.page === "portrait" || props.page === "cuba" || props.page === "concert"
@@ -120,7 +120,7 @@ function Navbar2(props) {
                                     <List component="div" disablePadding>
                                         <Link to={"/portrait"} style={{textDecoration: 'none'}}>
                                             <ListItemButton sx={{pl: 4, color: 'black', display: 'block'}}
-                                                            style={{background:"transparent"}}>
+                                                            style={{background:"transparent"}} disableRipple>
                                                 <Typography style={{fontSize: '22px', fontFamily:"Couture"}}
                                                             sx={
                                                                 props.page === "portrait"
@@ -132,7 +132,7 @@ function Navbar2(props) {
                                         </Link>
                                         <Link to={"/concert"} style={{textDecoration: 'none'}}>
                                             <ListItemButton sx={{pl: 4, color: 'black', display: 'block'}}
-                                                            style={{background:"transparent"}}>
+                                                            style={{background:"transparent"}} disableRipple>
                                                 <Typography style={{fontSize: '22px', fontFamily:"Couture"}}
                                                             sx={
                                                                 props.page === "concert"
@@ -144,7 +144,7 @@ function Navbar2(props) {
                                         </Link>
                                         <Link to={"/cuba"} style={{textDecoration: 'none'}}>
                                             <ListItemButton sx={{pl: 4, color: 'black', display: 'block'}}
-                                                            style={{background:"transparent"}}>
+                                                            style={{background:"transparent"}} disableRipple>
                                                 <Typography style={{fontSize: '22px', fontFamily:"Couture"}}
                                                             sx={
                                                                 props.page === "cuba"
@@ -159,7 +159,7 @@ function Navbar2(props) {
                                 <ListItem disableGutters>
                                     <Link to={"/colour-wheel"} style={{textDecoration: 'none', width: "100%"}}>
                                         <ListItemButton sx={{color: 'black', display: 'block'}}
-                                                        style={{background:"transparent"}}>
+                                                        style={{background:"transparent"}} disableRipple>
                                             <Typography style={{fontSize: '28px', fontFamily:"Couture"}}
                                                         sx={
                                                             props.page === "colour"
@@ -173,7 +173,7 @@ function Navbar2(props) {
                                 <ListItem disableGutters>
                                     <Link to={"/about"} style={{textDecoration: 'none', width: "100%"}}>
                                         <ListItemButton sx={{color: 'black', display: 'block'}}
-                                                        style={{background:"transparent"}}>
+                                                        style={{background:"transparent"}} disableRipple>
                                             <Typography style={{fontSize: '28px', fontFamily:"Couture"}}
                                                         sx={
                                                             props.page === "about"
@@ -199,7 +199,7 @@ function Navbar2(props) {
                 <Box sx={{display: {xs: 'none', lg: 'flex'}}} style={{position: 'absolute', left: '1.5vw'}}>
 
                     <Button sx={{my: 2, mx: 2, color: 'black', display: 'block', paddingSide: '10vw'}}
-                            onClick={handleClick} style={{background:"transparent"}}
+                            onClick={handleClick} style={{background:"transparent"}} disableRipple
                     >
                         <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
                                     sx={
@@ -222,7 +222,7 @@ function Navbar2(props) {
                         <Link to={"/portrait"} style={{textDecoration: 'none', color: 'inherit'}}>
                             <MenuItem onClick={handleClose} style={{background:"transparent"}}>
                                 <Button sx={{ mx: 2, color: 'black', display: 'block'}}
-                                        style={{background:"transparent"}}>
+                                        style={{background:"transparent"}} disableRipple>
                                     <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
                                                 sx={
                                                     props.page === "portrait"
@@ -236,7 +236,7 @@ function Navbar2(props) {
                         <Link to={"/concert"} style={{textDecoration: 'none', color: 'inherit'}}>
                             <MenuItem onClick={handleClose} style={{background:"transparent"}}>
                                 <Button sx={{ mx: 2, color: 'black', display: 'block'}}
-                                        style={{background:"transparent"}}>
+                                        style={{background:"transparent"}} disableRipple>
                                     <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
                                                 sx={
                                                     props.page === "concert"
@@ -250,7 +250,7 @@ function Navbar2(props) {
                         <Link to={"/cuba"} style={{textDecoration: 'none', color: 'inherit'}}>
                             <MenuItem onClick={handleClose} style={{background:"transparent"}}>
                                 <Button sx={{ mx: 2, color: 'black', display: 'block'}}
-                                        style={{background:"transparent"}}>
+                                        style={{background:"transparent"}} disableRipple>
                                     <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
                                                 sx={
                                                     props.page === "cuba"
@@ -264,7 +264,7 @@ function Navbar2(props) {
                     </Menu>
                     <Link to={"/colour-wheel"} style={{textDecoration: 'none', color: 'inherit'}}>
                         <Button sx={{my: 2, mx: 2, color: 'black', display: 'block'}}
-                                style={{background:"transparent"}}>
+                                style={{background:"transparent"}} disableRipple>
                             <Typography
                                 style={{fontSize: '20px', fontFamily: "Couture"}}
                                 sx={
@@ -278,7 +278,7 @@ function Navbar2(props) {
                     </Link>
                     <Link to={"/about"} style={{textDecoration: 'none'}}>
                         <Button sx={{my: 2, mx: 2, color: 'black'}}
-                                style={{background:"transparent"}}>
+                                style={{background:"transparent"}} disableRipple>
                             <Typography style={{fontSize: '20px', fontFamily:"Couture"}}
                                         sx={
                                             props.page === "about"
