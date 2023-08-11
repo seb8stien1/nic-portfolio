@@ -40,7 +40,7 @@ function Navbar2(props) {
 
     return (
 
-        <AppBar position="static" style={{backgroundColor: 'white', width: '100%', marginTop: '3vh'}} elevation={0}>
+        <AppBar position="sticky" style={{backgroundColor: 'white', width: '100%', height: "16vh", paddingTop: "3vh"}} elevation={0}>
             <Toolbar disableGutters>
 
                 <Box sx={{flexGrow: 1, display: {xs: 'flex', lg: 'none'}}}>
@@ -68,7 +68,7 @@ function Navbar2(props) {
                         slotProps={{backdrop: {style: {backgroundColor: 'rgba(255,255,255,1)'}}}}
                         fullScreen={true}
                     >
-                        <Toolbar disableGutters style={{width: "100%", paddingTop: "3vh"}}>
+                        <Toolbar disableGutters style={{width: "100%", height: "16vh"}}>
                             <IconButton
                                 size="large"
                                 aria-label="account of current user"
@@ -82,7 +82,7 @@ function Navbar2(props) {
                             <Box sx={{flexGrow: 1, display: {xs: 'flex', lg: 'none'}}}
                                  style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
                                 <Link to="/">
-                                    <img alt="Pen Product" src={logo} style={{height: "7vh", width: "13vh"}}/>
+                                    <img alt="Pen Product" src={logo} style={{height: "12vh", width: "16vh", userSelect: "none"}}/>
                                 </Link>
                             </Box>
 
@@ -188,12 +188,12 @@ function Navbar2(props) {
                         </Box>
 
                     </Dialog>
-                    <Box sx={{flexGrow: 1, display: {xs: 'flex', lg: 'none'}}}
-                         style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
-                        <Link to="/">
-                            <img alt="Pen Product" src={logo} style={{height: "7vh", width: "13vh"}}/>
-                        </Link>
-                    </Box>
+                    {/*<Box sx={{flexGrow: 1, display: {xs: 'flex', lg: 'none'}}}*/}
+                    {/*     style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>*/}
+                    {/*    <Link to="/">*/}
+                    {/*        <img alt="Pen Product" src={logo} style={{height: "7vh", width: "13vh"}}/>*/}
+                    {/*    </Link>*/}
+                    {/*</Box>*/}
                 </Box>
 
                 <Box sx={{display: {xs: 'none', lg: 'flex'}}} style={{position: 'absolute', left: '1.5vw'}}>
@@ -290,9 +290,9 @@ function Navbar2(props) {
                     </Link>
                 </Box>
 
-                <Box sx={{flexGrow: 1, display: {xs: 'none', lg: 'flex'}}}
+                <Box
                      style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop: "3vh"}}>
-                    <Link to="/">
+                    <Link to="/" style={{transition: "none !important"}}>
                         <img alt="Pen Product" src={logo} style={{height: "12vh", width: "16vh"}}/>
                     </Link>
                 </Box>

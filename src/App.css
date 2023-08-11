@@ -2,8 +2,24 @@
   text-align: center;
   display: flex;
   min-height:100vh;
+  background-color: white;
+  overscroll-color: white;
 }
 
+:root {
+  --background-light: white;
+  --background-dark: white;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white;
+  }
+}
+html, body {
+  background-color: white;
+  overscroll-color: white;
+
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -27,9 +27,9 @@ const photos3Column = [
     {src:require("../resources/concert/concert25.jpg"), width: 800, height: 1000},
 
     {src:require("../resources/concert/concert6.jpg"), width: 750, height: 1000},
-    {src:require("../resources/concert/concert29.jpg"), width: 800, height: 1000},
-    {src:require("../resources/concert/concert42.jpg"), width: 1000, height: 663},
     {src:require("../resources/concert/concert30.jpg"), width: 800, height: 1000},
+    {src:require("../resources/concert/concert42.jpg"), width: 1000, height: 663},
+    {src:require("../resources/concert/concert29.jpg"), width: 800, height: 1000},
     {src:require("../resources/concert/concert7.jpg"), width: 1000, height: 750},
     {src:require("../resources/concert/concert5.jpg"), width: 800, height: 1000},
     {src:require("../resources/concert/concert41.jpg"), width: 750, height: 1000},

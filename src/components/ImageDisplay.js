@@ -6,7 +6,8 @@ export default function ImageDisplay(props) {
     const [index, setIndex] = useState(-1);
 
     return(
-    <div style={{marginLeft:"3vw", marginRight:"3vw", marginTop:"5vh", marginBottom:"2vh"}}>
+    //     todo:lazy load images
+    <div style={{marginLeft:"3vw", marginRight:"3vw", marginBottom:"2vh"}}>
         <PhotoAlbum layout="columns"
                     photos={props.photos}
                     padding={(containerWidth) => {
