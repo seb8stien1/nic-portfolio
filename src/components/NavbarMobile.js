@@ -29,7 +29,7 @@ function NavbarMobile(props) {
     };
 
     return (
-        <AppBar position="static" sx={{display: {xs:"inline", lg:"none"}}} elevation={0} >
+        <AppBar position="sticky" sx={{display: {xs:"inline", lg:"none"}}} elevation={0} >
             <Toolbar disableGutters style={{backgroundColor: "white"}}>
                 <IconButton style={{position: "absolute", left: '1.5vw', background:"transparent"}} disableRipple onClick={handleClick} >
                     <MenuIcon style={{transform: "scale(1.2)"}}/>

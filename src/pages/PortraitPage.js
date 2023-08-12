@@ -126,8 +126,6 @@ function PortraitPage()  {
             <Box sx={{display: {xs:"none", lg: "inline"} }} >
                 <ImageDisplay photos={photos3Column}/>
             </Box>
-            <div style={{position: "fixed", zIndex:-1, bottom: 0, left:0, backgroundColor:"white", width:"100vw", height: "100vh"}} />
-
         </div>
     );
 }

@@ -11,7 +11,6 @@ class ColourWheel extends React.Component {
                 <NavbarWide page={"colour"}/>
                 <Navbar page={"colour"}/>
                 <CircleImages />
-                <div style={{position: "fixed", zIndex:-1, bottom: 0, left:0, backgroundColor:"white", width:"100vw", height: "100vh"}} />
             </div>
         );
     }

@@ -20,12 +20,10 @@ const photos = [
 function WhitePage () {
 
     return (
-        <div>
+        <div style={{height:"100vh"}}>
             <NavbarWide page={"colour"}/>
             <Navbar page={"colour"}/>
             <ImageDisplay photos={photos} photos2={photos}/>
-            <div style={{position: "fixed", zIndex:-1, bottom: 0, left:0, backgroundColor:"white", width:"100vw", height: "100vh"}} />
-
         </div>
     );
 }

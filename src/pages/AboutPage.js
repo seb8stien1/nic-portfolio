@@ -45,7 +45,6 @@ class AboutPage extends React.Component {
                         Contact: penproduct1@gmail.com
                     </Typography>
                 </Box>
-                <div style={{position: "fixed", zIndex:-1, bottom: 0, left:0, backgroundColor:"white", width:"100vw", height: "100vh"}} />
             </div>
         )
     };
