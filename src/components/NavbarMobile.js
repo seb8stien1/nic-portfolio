@@ -52,11 +52,11 @@ function NavbarMobile(props) {
                             <CloseIcon style={{transform: "scale(1.2)"}}/>
                         </IconButton>
                         <Box style={{position: 'relative', left: '50%', transform: "translateX(-50%)", marginTop: "2vh", marginBottom: "1vh"}}>
-                            <Link to="/" style={{ textDecoration: 'none', userSelect: 'none', pointerEvents: 'none' }}>
+                            <Link to="/" style={{ textDecoration: 'none',  WebkitTapHighlightColor: 'transparent',}}>
                                 <img alt="Pen Product" src={logo} style={{height: "8vh", width: "12vh"}}/>
                             </Link>
                         </Box>
-                        <Box style={{position: 'absolute', right: '1.5vw'}}>
+                        <Box style={{position: 'absolute', right: '1.5vw', WebkitTapHighlightColor: 'transparent',}}>
                             <Link to={"https://www.instagram.com/penproduct/"}>
                                 <InstagramIcon style={{transform: "scale(1.2)", color: "black"}}/>
                             </Link>
@@ -131,12 +131,12 @@ function NavbarMobile(props) {
                     </Box>
                 </Dialog>
                 <Box style={{position: 'relative', left: '50%', transform: "translateX(-50%)", marginTop: "2vh", marginBottom: "1vh"}}>
-                    <Link to="/" style={{ textDecoration: 'none', userSelect: 'none', pointerEvents: 'none' }}>
-                        <img alt="Pen Product" src={logo} style={{height: "8vh", width: "12vh"}}/>
+                    <Link to="/" style={{ textDecoration: 'none', WebkitTapHighlightColor: 'transparent',}}>
+                        <img alt="Pen Product" src={logo} style={{height: "8vh", width: "12vh", }}/>
                     </Link>
                 </Box>
                 <Box style={{position: 'absolute', right: '1.5vw'}}>
-                    <Link to={"https://www.instagram.com/penproduct/"}>
+                    <Link to={"https://www.instagram.com/penproduct/"} style={{WebkitTapHighlightColor: 'transparent',}}>
                         <InstagramIcon style={{transform: "scale(1.2)", color: "black"}}/>
                     </Link>
                 </Box>
