@@ -19,7 +19,7 @@ const NavbarWide = (props) => {
     };
 
     return (
-        <AppBar position="sticky" sx={{display: {xs:"none", lg:"inline"}}} elevation={0} >
+        <AppBar position="sticky" sx={{display: {xs:"none", lg:"block"}}} elevation={0} >
             <Toolbar disableGutters style={{backgroundColor: "white"}}>
                 <Box style={{position: 'absolute', left: '1.5vw'}} >
                     <Button style={{background:"transparent"}} disableRipple onClick={handleClick}>
