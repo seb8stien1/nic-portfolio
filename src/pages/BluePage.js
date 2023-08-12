@@ -1,8 +1,9 @@
 import React from 'react';
 import '../App.css';
-import Navbar from "../components/Navbar2";
+import Navbar from "../components/NavbarMobile";
 import ImageDisplay from "../components/ImageDisplay";
 import Box from "@mui/material/Box";
+import NavbarWide from "../components/NavbarWide";
 
 const photos3Column = [
     {src:require("../resources/blue/blue6.jpg"), width: 2480, height: 3306, title: "picture 1"},
@@ -76,13 +77,16 @@ function BluePage () {
 
     return (
         <div>
+            <NavbarWide page={"colour"}/>
             <Navbar page={"colour"}/>
             <Box sx={{display: {xs:"inline", lg: "none"} }} >
                 <ImageDisplay photos={photosMobile}/>
             </Box>
             <Box sx={{display: {xs:"none", lg: "inline"} }} >
                 <ImageDisplay photos={photos3Column}/>
-            </Box>        </div>
+            </Box>
+            <div style={{position: "fixed", zIndex:-1, bottom: 0, left:0, backgroundColor:"white", width:"100vw", height: "100vh"}} />
+        </div>
     );
 }
 

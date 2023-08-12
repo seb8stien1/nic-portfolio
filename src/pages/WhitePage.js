@@ -1,12 +1,13 @@
 import React from 'react';
 import '../App.css';
-import Navbar from "../components/Navbar2";
+import Navbar from "../components/NavbarMobile";
 import p1 from "../resources/white/white1.jpg"
 import p2 from "../resources/white/white2.jpg"
 import p3 from "../resources/white/white3.jpg"
 import p4 from "../resources/white/white4.jpg"
 import p5 from "../resources/white/white5.jpg"
 import ImageDisplay from "../components/ImageDisplay";
+import NavbarWide from "../components/NavbarWide";
 
 
 const photos = [
@@ -20,8 +21,11 @@ function WhitePage () {
 
     return (
         <div>
+            <NavbarWide page={"colour"}/>
             <Navbar page={"colour"}/>
             <ImageDisplay photos={photos} photos2={photos}/>
+            <div style={{position: "fixed", zIndex:-1, bottom: 0, left:0, backgroundColor:"white", width:"100vw", height: "100vh"}} />
+
         </div>
     );
 }

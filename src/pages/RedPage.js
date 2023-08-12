@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import Navbar from "../components/Navbar2";
+import Navbar from "../components/NavbarMobile";
 import p1 from "../resources/red/red1.jpg"
 import p2 from "../resources/red/red2.jpg";
 import p3 from "../resources/red/red3.jpg";
@@ -25,6 +25,7 @@ import p20 from "../resources/red/red20.jpg";
 import "yet-another-react-lightbox/styles.css";
 import ImageDisplay from "../components/ImageDisplay";
 import Box from "@mui/material/Box";
+import NavbarWide from "../components/NavbarWide";
 
 
 const photos3Column = [
@@ -84,6 +85,7 @@ function RedPage()  {
 
     return (
         <div>
+            <NavbarWide page={"colour"}/>
             <Navbar page={"colour"}/>
             <Box sx={{display: {xs:"inline", lg: "none"} }} >
                 <ImageDisplay photos={photosMobile}/>
@@ -91,6 +93,8 @@ function RedPage()  {
             <Box sx={{display: {xs:"none", lg: "inline"} }} >
                 <ImageDisplay photos={photos3Column}/>
             </Box>
+            <div style={{position: "fixed", zIndex:-1, bottom: 0, left:0, backgroundColor:"white", width:"100vw", height: "100vh"}} />
+
         </div>
     );
 }

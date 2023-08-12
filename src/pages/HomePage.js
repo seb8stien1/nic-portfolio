@@ -1,8 +1,9 @@
 import React from 'react';
 import '../App.css';
-import Navbar from "../components/Navbar2";
+import Navbar from "../components/NavbarMobile";
 import ImageDisplay from "../components/ImageDisplay";
 import Box from "@mui/material/Box";
+import NavbarWide from "../components/NavbarWide";
 
 const photos3Column = [
     {src:require("../resources/home/home9.jpg"), width: 800, height: 1000},
@@ -60,6 +61,7 @@ function HomePage()  {
     return (
         <div>
             <Navbar/>
+            <NavbarWide />
             <Box sx={{display: {xs:"inline", lg: "none"} }} >
                 <ImageDisplay photos={photosMobile}/>
             </Box>

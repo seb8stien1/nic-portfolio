@@ -1,8 +1,9 @@
 import React from 'react';
 import '../App.css';
-import Navbar from "../components/Navbar2";
+import Navbar from "../components/NavbarMobile";
 import ImageDisplay from "../components/ImageDisplay";
 import Box from "@mui/material/Box";
+import NavbarWide from "../components/NavbarWide";
 
 const photos3Column = [
     {src:require("../resources/concert/concert26.jpg"), width: 800, height: 1000},
@@ -71,6 +72,7 @@ function ConcertPage()  {
 
     return (
         <div>
+            <NavbarWide page={'concert'}/>
             <Navbar page={'concert'}/>
             <Box sx={{display: {xs:"inline", lg: "none"} }} >
                 <ImageDisplay photos={photosMobile}/>
@@ -78,6 +80,8 @@ function ConcertPage()  {
             <Box sx={{display: {xs:"none", lg: "inline"} }} >
                 <ImageDisplay photos={photos3Column}/>
             </Box>
+            <div style={{position: "fixed", zIndex:-1, bottom: 0, left:0, backgroundColor:"white", width:"100vw", height: "100vh"}} />
+
         </div>
     );
 }
