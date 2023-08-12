@@ -29,7 +29,7 @@ function NavbarMobile(props) {
     };
 
     return (
-        <AppBar position="sticky" sx={{display: {xs:"inline", lg:"none"}}} elevation={0} >
+        <AppBar position="static" sx={{display: {xs:"inline", lg:"none"}}} elevation={0} >
             <Toolbar disableGutters style={{backgroundColor: "white"}}>
                 <IconButton style={{position: "absolute", left: '1.5vw', background:"transparent"}} disableRipple onClick={handleClick} >
                     <MenuIcon style={{transform: "scale(1.2)"}}/>
@@ -57,8 +57,8 @@ function NavbarMobile(props) {
                             </Link>
                         </Box>
                         <Box style={{position: 'absolute', right: '1.5vw'}}>
-                            <Link to={"https://www.instagram.com/penproduct/"}>
-                                <InstagramIcon style={{transform: "scale(1.2)", filter: "grayscale(100%)"}}/>
+                            <Link to={"https://www.instagram.com/penproduct/"} style={{textDecoration: 'none'}}>
+                                <InstagramIcon style={{transform: "scale(1.2)", color: "black"}}/>
                             </Link>
                         </Box>
                     </Toolbar>
@@ -137,7 +137,7 @@ function NavbarMobile(props) {
                 </Box>
                 <Box style={{position: 'absolute', right: '1.5vw'}}>
                     <Link to={"https://www.instagram.com/penproduct/"} >
-                        <InstagramIcon style={{transform: "scale(1.2)", filter: "grayscale(100%)"}}/>
+                        <InstagramIcon style={{transform: "scale(1.2)", color: "black"}}/>
                     </Link>
                 </Box>
             </Toolbar>

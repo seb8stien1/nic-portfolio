@@ -91,7 +91,7 @@ const NavbarWide = (props) => {
                 </Box>
                 <Box style={{position: 'absolute', right: '1.5vw'}}>
                     <Link to={"https://www.instagram.com/penproduct/"} >
-                        <InstagramIcon style={{transform: "scale(1.2)", filter: "grayscale(100%)"}}/>
+                        <InstagramIcon style={{transform: "scale(1.2)", color: "black"}}/>
                     </Link>
                 </Box>
             </Toolbar>

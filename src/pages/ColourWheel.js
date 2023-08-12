@@ -7,7 +7,7 @@ class ColourWheel extends React.Component {
     render() {
 
         return (
-            <div>
+            <div style={{display: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
                 <NavbarWide page={"colour"}/>
                 <Navbar page={"colour"}/>
                 <CircleImages />
